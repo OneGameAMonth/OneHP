@@ -26,6 +26,7 @@ package game.states
 
 			if(FlxG.mouse.justPressed())
 			{
+				FlxG.mouse.hide();
 				FlxG.switchState(new PlayState());
 			}
 		}
