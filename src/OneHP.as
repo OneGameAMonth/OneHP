@@ -15,6 +15,8 @@ package
 //			super(320, 240, MenuState, 2);
             // TODO: add menu state, and set first state to it
             super(320, 240, PlayState, 2);
+
+            forceDebugger = true;
 		}
 	}
 }
