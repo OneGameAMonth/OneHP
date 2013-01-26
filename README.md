@@ -6,4 +6,4 @@
 *License: see license.txt*
 
 **About dev log and other informations, see the wiki:**
-**[wiki](OneHP/wiki/Home)**
+**[wiki](https://github.com/pixelpicosean/OneHP/wiki/Home)**
