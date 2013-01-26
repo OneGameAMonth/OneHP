@@ -5,5 +5,5 @@
 
 *License: see license.txt*
 
-**About dev log and other informations, see the wiki: **
-[wiki](wiki/Home)
+**About dev log and other informations, see the wiki:**
+**[wiki](wiki/Home)**
