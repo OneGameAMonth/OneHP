@@ -2,6 +2,8 @@ package game
 {
     import flash.display.Sprite;
 
+    import game.enemies.Boss;
+
     import org.flixel.FlxGroup;
     import org.flixel.FlxPoint;
 
@@ -18,10 +20,13 @@ package game
         // major objects
         public static var player:Player;
         public static var playerMidPoint:FlxPoint;
+        public static var boss:Boss;
+        public static var bossMidPoint:FlxPoint;
 
         // major groups
         public static var bullets:FlxGroup;
         public static var blocks:FlxGroup;
+        public static var enemies:FlxGroup;
 
         // [Debugger]
         public static var theTopGameSprite:Sprite;

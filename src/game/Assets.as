@@ -14,6 +14,9 @@ package game
         [Embed(source="../../assets/Bullet.png")]
         public static var Img_Bullet:Class;
 
+        [Embed(source="../../assets/BossMantis.png")]
+        public static var Img_BossMantis:Class;
+
         public function Assets() {}
     }
 }
