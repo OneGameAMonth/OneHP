@@ -25,11 +25,11 @@ package game.states
 		override public function create():void
 		{
             // create major objects
-            _player = new Player(20, 20);
+            _player = new Player(120, 20);
             FlxG.camera.follow(_player, FlxCamera.STYLE_PLATFORMER);
             SeanG.player = _player;
 
-            _boss = new Boss(20, 20);
+            _boss = new Boss(120, 20);
             SeanG.boss = _boss;
 
             // create major groups
@@ -43,8 +43,8 @@ package game.states
             SeanG.bullets = _bullets;
 
             // [Dev]
-            _floor = new FlxTileblock(0, 80, 160, 16);
-            _floor.makeGraphic(160, 16, 0xcbbca0ff);
+            _floor = new FlxTileblock(0, 80, 320, 16);
+            _floor.makeGraphic(320, 16, 0xcbbca0ff);
 
             // add objects to groups
             SeanG.blocks.add(_floor);

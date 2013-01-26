@@ -24,7 +24,7 @@ package game.enemies
         public function Boss(X:Number = 0, Y:Number = 0)
         {
             super(X, Y);
-            loadGraphic(Assets.Img_BossMantis, true, false, 32, 32);
+            loadGraphic(Assets.Img_BossMantis, true, false, 64, 64);
 
             // [Animation]
             addAnimation("idle", [0]);
@@ -58,7 +58,7 @@ package game.enemies
 
         public function handleMessage(msg:Message):void
         {
-            // ...
+            _stateMachine.handleMessage(msg);
         }
 
         public function getBehaviorManager():BehaviorManager

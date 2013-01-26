@@ -17,7 +17,7 @@ package
 		public function OneHP()
 		{
             // TODO: add menu state, and set first state to it
-            super(160, 120, PlayState, 4);
+            super(320, 240, PlayState, 2);
 
             forceDebugger = true;
             FlxG.mouse.show();

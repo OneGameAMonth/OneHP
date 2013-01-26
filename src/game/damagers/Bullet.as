@@ -15,10 +15,10 @@ package game.damagers
 		{
 			super();
             loadGraphic(Assets.Img_Bullet, true);
-			width = 1;
-            height = 1;
-			offset.x = 1;
-            offset.y = 1;
+			width = 3;
+            height = 3;
+			offset.x = 0;
+            offset.y = 0;
 
             addAnimation("shoot", [0]);
             addAnimation("poof", [1, 2, 3], 20, false);
