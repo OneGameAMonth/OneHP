@@ -1,4 +1,4 @@
-package
+package game.states
 {
     import org.flixel.FlxG;
     import org.flixel.FlxState;

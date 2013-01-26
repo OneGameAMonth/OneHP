@@ -2,34 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b60ca88b-4aaa-4f83-84f3-b91598b8d09b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html-template/playerProductInstall.swf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Default.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/FlixelCommunity.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MenuState.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/OneHP.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OneHP.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/PlayState.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Preloader.as" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/flexCompiler.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html-template/history/history.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html-template/history/history.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html-template/history/historyFrame.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html-template/index.template.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/html-template/swfobject.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/game/Assets.as" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/MenuState.as" afterPath="$PROJECT_DIR$/src/game/states/MenuState.as" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/PlayState.as" afterPath="$PROJECT_DIR$/src/game/states/PlayState.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/OneHP.as" afterPath="$PROJECT_DIR$/src/OneHP.as" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OneHP.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="b60ca88b-4aaa-4f83-84f3-b91598b8d09b" time="1359161956263" ignored="false" />
-    <file path="/fragment.js2" changelist="b60ca88b-4aaa-4f83-84f3-b91598b8d09b" time="1359161727533" ignored="false" />
+    <file path="/fragment.js2" changelist="b60ca88b-4aaa-4f83-84f3-b91598b8d09b" time="1359162630343" ignored="false" />
     <file path="/OneHP.as" changelist="b60ca88b-4aaa-4f83-84f3-b91598b8d09b" time="1359161880110" ignored="false" />
     <file path="/MenuState.as" changelist="b60ca88b-4aaa-4f83-84f3-b91598b8d09b" time="1359161903204" ignored="false" />
     <file path="/PlayState.as" changelist="b60ca88b-4aaa-4f83-84f3-b91598b8d09b" time="1359161917905" ignored="false" />
@@ -91,10 +73,30 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="PlayState.as" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PlayState.as">
+      <file leaf-file-name="PlayState.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/states/PlayState.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="60" selection-start="214" selection-end="214" vertical-scroll-proportion="0.2170418">
+            <state line="4" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Assets.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/game/Assets.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="35" selection-start="137" selection-end="137" vertical-scroll-proportion="0.19292605">
+              <folding>
+                <element signature="n#!!doc" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SeanG.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/game/SeanG.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="50" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -121,6 +123,10 @@
         <option value="$PROJECT_DIR$/src/OneHP.as" />
         <option value="$PROJECT_DIR$/src/MenuState.as" />
         <option value="$PROJECT_DIR$/src/PlayState.as" />
+        <option value="$PROJECT_DIR$/src/game/PlayState.as" />
+        <option value="$PROJECT_DIR$/src/SeanG.as" />
+        <option value="$PROJECT_DIR$/src/game/SeanG.as" />
+        <option value="$PROJECT_DIR$/src/game/Assets.as" />
       </list>
     </option>
   </component>
@@ -138,7 +144,7 @@
     <OptionsSetting value="true" id="Edit" />
     <OptionsSetting value="true" id="Undo Check Out" />
     <OptionsSetting value="true" id="Get Latest Version" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectReloadState">
@@ -193,6 +199,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OneHP" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="states" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -212,6 +258,15 @@
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="MemberChooser.copyJavadoc" value="false" />
   </component>
+  <component name="RecentsManager">
+    <key name="CreateActionScriptClassDialog.DESTINATION_PACKAGE_RECENT_KEY">
+      <recent name="game" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/game" />
+      <recent name="$PROJECT_DIR$/src/game/states" />
+    </key>
+  </component>
   <component name="RunManager" selected="Flash App.OneHP">
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
@@ -219,6 +274,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" output_log_level="null" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browserFamily" value="FIREFOX" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
@@ -442,17 +510,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MenuState.as">
+    <entry file="file://$PROJECT_DIR$/src/game/states/MenuState.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="3" column="31" selection-start="69" selection-end="69" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PlayState.as">
+    <entry file="file://$PROJECT_DIR$/src/game/states/PlayState.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="60" selection-start="214" selection-end="214" vertical-scroll-proportion="0.2170418">
+        <state line="4" column="0" selection-start="82" selection-end="82" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/SeanG.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="50" selection-start="482" selection-end="482" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/game/Assets.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="35" selection-start="137" selection-end="137" vertical-scroll-proportion="0.19292605">
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
