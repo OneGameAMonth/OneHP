@@ -15,7 +15,7 @@ package game
     public class SeanG
     {
         // [Message System]
-        public static var switchboard:Switchboard;
+        public static var switchboard:Switchboard = new Switchboard();
 
         // major objects
         public static var player:Player;
