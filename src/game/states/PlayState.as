@@ -44,7 +44,7 @@ package game.states
         {
             super.update();
 
-            FlxG.collide(_floor, SeanG.player);
+            FlxG.collide(SeanG.blocks, SeanG.player);
         }
 	}
 }
