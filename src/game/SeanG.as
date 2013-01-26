@@ -2,8 +2,7 @@ package game
 {
     import flash.display.Sprite;
 
-//    import game.hero.Hero;
-
+    import org.flixel.FlxGroup;
     import org.flixel.FlxPoint;
 
     import pixelsean.message.Switchboard;
@@ -15,9 +14,14 @@ package game
     {
         // [Message System]
         public static var switchboard:Switchboard;
-        
-//        public static var player:Hero;
+
+        // major objects
+        public static var player:Player;
         public static var playerMidPoint:FlxPoint;
+
+        // major groups
+        public static var bullets:FlxGroup;
+        public static var blocks:FlxGroup;
 
         // [Debugger]
         public static var theTopGameSprite:Sprite;
