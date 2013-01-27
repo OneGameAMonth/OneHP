@@ -18,7 +18,11 @@ package game
         [Embed(source="../../assets/BossMantis.png")]
         public static var Img_BossMantis:Class;
 
-        // level
+        // Platform assets
+        [Embed(source="../../assets/Platform.png")]
+        public static var Img_Platform:Class;
+
+        // Level files
         [Embed(source="../../assets/mapCSV_Level_1_blocks.csv", mimeType="application/octet-stream")]
         public static var CSV_Level_1blocks:Class;
         [Embed(source="../../assets/Tileset.png")]

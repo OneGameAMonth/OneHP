@@ -1,11 +1,5 @@
 package game.states
 {
-    import game.Assets;
-    import game.SeanG;
-    import game.damagers.Bullet;
-    import game.enemies.Boss;
-
-    import org.flixel.FlxCamera;
     import org.flixel.FlxG;
     import org.flixel.FlxGroup;
     import org.flixel.FlxSprite;
@@ -15,6 +9,9 @@ package game.states
 
     import game.Player;
     import game.SeanG;
+    import game.Assets;
+    import game.doodads.Platform;
+    import game.enemies.Boss;
 
     public class PlayState extends FlxState
 	{
@@ -24,6 +21,7 @@ package game.states
         private var _bullets:FlxGroup;
         private var _objects:FlxGroup;
         private var _hazards:FlxGroup;
+        private var _platforms:FlxGroup;
 
         // Tilemaps
         public var layerLevel_1blocks:FlxTilemap;
@@ -40,7 +38,6 @@ package game.states
 
             // create major objects
             _player = new Player(32, 160);
-//            FlxG.camera.follow(_player, FlxCamera.STYLE_PLATFORMER);
             SeanG.player = _player;
 
             _boss = new Boss(0, 36);
@@ -54,29 +51,36 @@ package game.states
             // meta groups for collision
             _objects = new FlxGroup();
             _hazards = new FlxGroup();
+            _platforms = new FlxGroup();
 
             // register objects to SeanG
             SeanG.player = _player;
             SeanG.boss = _boss;
             SeanG.blocks = _blocks;
             SeanG.bullets = _bullets;
-
-            // [Dev]
-//            _floor = new FlxTileblock(0, 300, 240, 32);
-//            _floor.makeGraphic(240, 32, 0xcbbca0ff);
+            SeanG.platforms = _platforms;
 
             // load map
             layerLevel_1blocks = new FlxTilemap;
             layerLevel_1blocks.loadMap( new Assets.CSV_Level_1blocks, Assets.Img_Level_1blocks, 8, 8, FlxTilemap.OFF, 0, 1, 1 );
+            // - add platforms, TODO: load platform from level files
+            _platforms.add(new Platform(48.000, 112.000, "one-off"));
+            _platforms.add(new Platform(48.000, 240.000, "normal"));
+            _platforms.add(new Platform(112.000, 208.000, "one-off"));
+            _platforms.add(new Platform(48.000, 176.000, "normal"));
+            _platforms.add(new Platform(176.000, 176.000, "normal"));
+            _platforms.add(new Platform(176.000, 240.000, "normal"));
+            _platforms.add(new Platform(112.000, 144.000, "one-off"));
+            _platforms.add(new Platform(176.000, 112.000, "normal"));
 
             // add objects to groups
-//            SeanG.blocks.add(_floor);
             _blocks.add(layerLevel_1blocks);
 
             // add groups by their draw order
             add(_blocks);
             add(_boss);
             add(_player);
+            add(_platforms);
             add(_bullets);
 
             // sort objects into helper groups
@@ -91,6 +95,7 @@ package game.states
             SeanG.switchboard.update();
 
             FlxG.collide(_blocks, _objects);
+            FlxG.collide(_platforms, _player, touchPlatform);
             FlxG.overlap(_objects, _hazards, overlapped);
         }
 
@@ -110,6 +115,11 @@ package game.states
         {
             sprite1.hurt(1);
             sprite2.hurt(1);
+        }
+
+        private function touchPlatform(sprite1:FlxSprite, sprite2:FlxSprite):void
+        {
+            (sprite1 as Platform).touchedBy(sprite2);
         }
 	}
 }

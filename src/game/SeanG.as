@@ -26,6 +26,7 @@ package game
         // major groups
         public static var bullets:FlxGroup;
         public static var blocks:FlxGroup;
+        public static var platforms:FlxGroup;
         public static var enemies:FlxGroup;
 
         // [Debugger]
