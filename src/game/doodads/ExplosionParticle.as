@@ -8,14 +8,12 @@ package game.doodads
 
     import game.Assets;
 
-    public class BulletDust extends FlxSprite
+    public class ExplosionParticle extends FlxSprite
     {
-
-
-        public function BulletDust()
+        public function ExplosionParticle()
         {
             super();
-            loadGraphic(Assets.ImgBulletDust, true, false, 16, 16);
+            loadGraphic(Assets.Img_ExplosionParticle, true, false, 16, 16);
 
             addAnimation("flow", [0, 1, 2, 2, 3, 3], 12, false);
         }

@@ -1,26 +1,23 @@
 package game.states
 {
-    import game.levels.Level_Level_1;
-
+    import org.flixel.FlxCamera;
     import org.flixel.FlxEmitter;
     import org.flixel.FlxG;
     import org.flixel.FlxGroup;
     import org.flixel.FlxSprite;
     import org.flixel.FlxState;
-    import org.flixel.FlxTileblock;
-    import org.flixel.FlxTilemap;
     import org.flixel.plugin.photonstorm.FX.BlurFX;
     import org.flixel.plugin.photonstorm.FlxSpecialFX;
 
     import pixelsean.message.IMessageListener;
+    import pixelsean.message.Message;
 
     import game.Player;
     import game.SeanG;
     import game.Assets;
     import game.doodads.Platform;
     import game.enemies.Boss;
-
-    import pixelsean.message.Message;
+    import game.levels.Level_Level_1;
 
     public class PlayState extends FlxState implements IMessageListener
 	{
@@ -36,9 +33,6 @@ package game.states
         private var _blur:BlurFX;
         private var _blurSprite:FlxSprite;
 
-        // Tilemaps
-//        public var layerLevel_1blocks:FlxTilemap;
-
 		override public function create():void
 		{
             // system setup
@@ -48,9 +42,10 @@ package game.states
             }
 
             // state setup
-//            FlxG.bgColor = 0x445566ff;
             FlxG.bgColor = 0xff282a2b;
-            FlxG.worldBounds.make(0, 0, 240, 320);
+            FlxG.camera.setBounds(0, 0, 240, 320, true);
+            FlxG.camera.follow(_player,FlxCamera.STYLE_PLATFORMER);
+//            FlxG.worldBounds.make(0, 0, 240, 320);
 
             // create major objects
             _player = new Player(32, 160);
@@ -150,6 +145,10 @@ package game.states
                 SeanG.switchboard.sendMessage("RestoreTimeScale", this, this, 1.6);
                 FlxG.camera.shake(0.05, 0.1);
                 FlxG.camera.flash(0xffd8eba2, 0.12);
+
+                // disable player's control and popup score panel
+                SeanG.player.controllable = false;
+                // TODO: popup score panel
             }
             else if (msg.name == "RestoreTimeScale")
             {

@@ -2,10 +2,10 @@
 <project>
   <version>3.1.1</version>
   <bgColor>0x333333</bgColor>
-  <viewPos x="80" y="3"/>
+  <viewPos x="117" y="1"/>
   <firstLayersTop>false</firstLayersTop>
   <spriteEntries currentId="3">
-    <sprite name="Platform" idx="1" className="Platform" image="Platform.png" width="24" height="8" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="1" boundsWidth="24" boundsHeight="5" constructor="%xpos%, %ypos%, &quot;%prop:type%&quot;" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="0" canEditFrames="true" lockRotation="false" selected="true">
+    <sprite name="Platform" idx="1" className="Platform" image="Platform.png" width="24" height="8" preview="0" anchorX="0" anchorY="0" centerAnchor="false" boundsX="0" boundsY="1" boundsWidth="24" boundsHeight="5" constructor="&quot;%prop:type%&quot;" creation="" exports="true" canScale="false" canRotate="false" surfaceObject="false" tileIndex="0" canEditFrames="true" lockRotation="false" selected="true">
       <anims>
         <anim name="normal" fps="0.5" loops="false">0,0</anim>
         <anim name="one-off" fps="0.5" loops="false">1,1</anim>
@@ -18,28 +18,27 @@
   <layers>
     <group name="Level_1" id="0" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true">
       <spritelayer name="Platforms" id="0" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false" selected="true">
-        <sprite guid="F5EC202A-F089-B648-C202-4783C8160F02" x="112" y="256" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+        <sprite guid="6DB144DD-744A-2752-0E2F-AA5FCFE66FE3" x="64" y="224" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
           </properties>
         </sprite>
-        <sprite guid="969510DA-4687-F094-2950-AD77C01528B8" x="112" y="160" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+        <sprite guid="ED042404-FAE3-0771-FA34-BBCDEAFCEC9C" x="160" y="160" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
           </properties>
         </sprite>
-        <sprite guid="2926DB53-2ECF-5C22-8CF4-853378E61120" x="48" y="112" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+        <sprite guid="F5EC202A-F089-B648-C202-4783C8160F02" x="208" y="128" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
           </properties>
         </sprite>
-        <sprite guid="ED042404-FAE3-0771-FA34-BBCDEAFCEC9C" x="176" y="112" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
-          <properties/>
+        <sprite guid="969510DA-4687-F094-2950-AD77C01528B8" x="112" y="192" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+          <properties>
+            <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
+          </properties>
         </sprite>
-        <sprite guid="EFB89EFC-E23A-196A-B97D-911D63D64365" x="176" y="208" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
-          <properties/>
-        </sprite>
-        <sprite guid="6DB144DD-744A-2752-0E2F-AA5FCFE66FE3" x="48" y="208" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+        <sprite guid="2926DB53-2ECF-5C22-8CF4-853378E61120" x="16" y="256" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties/>
         </sprite>
       </spritelayer>
@@ -260,7 +259,7 @@
     <SaveTileBrushesSeparately>false</SaveTileBrushesSeparately>
     <SaveGuidesSeparately>false</SaveGuidesSeparately>
   </options>
-  <exporter name="/Users/clover/Applications/LevelEditors/DAME.app/Contents/Resources/lua/Exporters/flixelComplex.lua" spritepos="Top Left" rotatedSpritePos="false" relativePaths="false" useProjectExporterOnly="false">
+  <exporter name="/Users/clover/Applications/LevelEditors/DAME.app/Contents/Resources/lua/Exporters/seanComplex.lua" spritepos="Top Left" rotatedSpritePos="false" relativePaths="false" useProjectExporterOnly="false">
     <setting name="ExportOnlyCSV">false</setting>
     <setting name="Imports">import game.doodads.Platform;</setting>
     <setting name="TileMapClass">FlxTilemap</setting>
