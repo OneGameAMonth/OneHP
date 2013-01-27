@@ -14,8 +14,15 @@ package game
         [Embed(source="../../assets/Bullet.png")]
         public static var Img_Bullet:Class;
 
+        // Boss assets
         [Embed(source="../../assets/BossMantis.png")]
         public static var Img_BossMantis:Class;
+
+        // level
+        [Embed(source="../../assets/mapCSV_Level_1_blocks.csv", mimeType="application/octet-stream")]
+        public static var CSV_Level_1blocks:Class;
+        [Embed(source="../../assets/Tileset.png")]
+        public static var Img_Level_1blocks:Class;
 
         public function Assets() {}
     }
