@@ -36,6 +36,9 @@ package game
         [Embed(source="../../assets/Panel.png")]
         public static var Img_Panel:Class;
 
+        [Embed(source="../../assets/Tut.png")]
+        public static var Img_Tut:Class;
+
         [Embed(source="../../assets/Jake_Allison_-_Jungle_Gymnast_tozo_Remix.mp3")]
         public static var Snd_BgMusic:Class;
 

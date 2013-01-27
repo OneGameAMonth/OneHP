@@ -4,7 +4,6 @@ package game.states
     import org.flixel.FlxState;
     import org.flixel.FlxText;
 
-    import game.SeanG;
     import game.Assets;
 
     public class MenuState extends FlxState
@@ -24,6 +23,8 @@ package game.states
             t.alignment = "center";
             t.color = 0xff335599;
             add(t);
+
+            FlxG.playMusic(Assets.Snd_BgMusic);
 		}
 
 		override public function update():void

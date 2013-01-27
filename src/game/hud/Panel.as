@@ -20,8 +20,8 @@ package game.hud
 
     public class Panel extends FlxGroup
     {
-        public var superTime:Number = 1/2;  // used less than 1/2 time
-        public var goodTime:Number = 3/4;   // used less than 3/4 but more than 1/2
+        public var superTime:Number = 3/5;
+        public var goodTime:Number = 8/9;
 
         private var _panel:FlxSprite;
         private var _promptText:FlxText;

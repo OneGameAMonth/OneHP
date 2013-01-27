@@ -15,24 +15,30 @@ package game.states
 		override public function create():void
 		{
 			var t:FlxSprite;
-			t = new FlxSprite(0, 0);
+			t = new FlxSprite(0, 0, Assets.Img_Tut);
 			add(t);
 
-            FlxG.playMusic(Assets.Snd_BgMusic);
+            SeanG.switchboard.sendMessage("Play", this, this, 4);
 		}
 
 		override public function update():void
 		{
 			super.update();
+            SeanG.switchboard.update();
 		}
 
         public function handleMessage(msg:Message):void
         {
             if(msg.name == "Play")
             {
-                SeanG.levelIndex = 0;
-                FlxG.switchState(new PlayState());
+                FlxG.fade(0xffd8eba2, 1.6, switchToPlay);
             }
+        }
+
+        private function switchToPlay():void
+        {
+            SeanG.levelIndex = 0;
+            FlxG.switchState(new PlayState());
         }
 	}
 }
