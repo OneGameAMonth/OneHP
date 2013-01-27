@@ -1,9 +1,11 @@
 //Code generated with DAME. http://www.dambots.com
 
-package com
+package game.levels
 {
 	import org.flixel.*;
 	import flash.utils.Dictionary;
+	// Custom imports:
+import game.doodads.Platform;
 	public class BaseLevel
 	{
 		// The masterLayer contains every single object in this group making it easy to empty the level.
@@ -47,10 +49,10 @@ package com
 			return map;
 		}
 
-		public function addSpriteToLayer(obj:FlxSprite, type:Class, layer:FlxGroup, xpos:Number, ypos:Number, angle:Number, scrollX:Number, scrollY:Number, flipped:Boolean = false, scaleX:Number = 1, scaleY:Number = 1, properties:Array = null, onAddCallback:Function = null):FlxSprite
+		public function addSpriteToLayer(cons:Object, obj:FlxSprite, type:Class, layer:FlxGroup, xpos:Number, ypos:Number, angle:Number, scrollX:Number, scrollY:Number, flipped:Boolean = false, scaleX:Number = 1, scaleY:Number = 1, properties:Array = null, onAddCallback:Function = null):FlxSprite
 		{
 			if( obj == null )
-				obj = new type(xpos, ypos);
+				obj = new type(xpos, ypos, cons);
 			obj.x += obj.offset.x;
 			obj.y += obj.offset.y;
 			obj.angle = angle;
@@ -81,7 +83,7 @@ package com
 		{
 			var textobj:FlxText = new FlxText(textdata.x, textdata.y, textdata.width, textdata.text, embed);
 			textobj.setFormat(textdata.fontName, textdata.size, textdata.color, textdata.alignment);
-			addSpriteToLayer(textobj, FlxText, layer , 0, 0, textdata.angle, scrollX, scrollY, false, 1, 1, properties, onAddCallback );
+			addSpriteToLayer(null, textobj, FlxText, layer , 0, 0, textdata.angle, scrollX, scrollY, false, 1, 1, properties, onAddCallback );
 			textobj.height = textdata.height;
 			textobj.origin.x = textobj.width * 0.5;
 			textobj.origin.y = textobj.height * 0.5;

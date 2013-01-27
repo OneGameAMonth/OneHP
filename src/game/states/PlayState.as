@@ -1,5 +1,7 @@
 package game.states
 {
+    import game.levels.Level_Level_1;
+
     import org.flixel.FlxEmitter;
     import org.flixel.FlxG;
     import org.flixel.FlxGroup;
@@ -35,10 +37,7 @@ package game.states
         private var _blurSprite:FlxSprite;
 
         // Tilemaps
-        public var layerLevel_1blocks:FlxTilemap;
-
-        // [Dev]
-        private var _floor:FlxTileblock;
+//        public var layerLevel_1blocks:FlxTilemap;
 
 		override public function create():void
 		{
@@ -92,20 +91,11 @@ package game.states
             SeanG.blur = _blur;
 
             // load map
-            layerLevel_1blocks = new FlxTilemap;
-            layerLevel_1blocks.loadMap( new Assets.CSV_Level_1blocks, Assets.Img_Level_1blocks, 8, 8, FlxTilemap.OFF, 0, 1, 1 );
-            // - add platforms, TODO: load platform from level files
-            _platforms.add(new Platform(48.000, 112.000, "one-off"));
-            _platforms.add(new Platform(48.000, 240.000, "normal"));
-            _platforms.add(new Platform(112.000, 208.000, "one-off"));
-            _platforms.add(new Platform(48.000, 176.000, "normal"));
-            _platforms.add(new Platform(176.000, 176.000, "normal"));
-            _platforms.add(new Platform(176.000, 240.000, "normal"));
-            _platforms.add(new Platform(112.000, 144.000, "one-off"));
-            _platforms.add(new Platform(176.000, 112.000, "normal"));
+            var _map:Level_Level_1 = new Level_Level_1();
+            _platforms.add(_map.PlatformsGroup);
 
             // add objects to groups
-            _blocks.add(layerLevel_1blocks);
+            _blocks.add(_map.layerblocks);
             _effects.add(_bossExplosionGibs);
             _effects.add(_blurSprite);
 

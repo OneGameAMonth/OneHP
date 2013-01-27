@@ -1,4 +1,4 @@
-package com
+package game.levels
 {
 	public class TextData
 	{
