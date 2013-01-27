@@ -153,5 +153,8 @@ import game.doodads.Platform;
 
 		// List of null classes allows you to spawn levels dynamically from code using ClassReference.
 		private static var level_Level_1:Level_Level_1;
+		private static var level_Level_2:Level_Level_2;
+		private static var level_Level_3:Level_Level_3;
+		private static var level_Level_4:Level_Level_4;
 	}
 }

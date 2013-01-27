@@ -2,13 +2,18 @@ package
 {
     import flash.ui.Mouse;
 
+    import game.states.MenuState;
+
     import org.flixel.FlxG;
     import org.flixel.FlxGame;
 
     import game.SeanG;
     import game.states.MenuState;
-    import game.states.PlayState;
+
     import game.levels.Level_Level_1;
+    import game.levels.Level_Level_2;
+    import game.levels.Level_Level_3;
+    import game.levels.Level_Level_4;
 
     [SWF(width="480", height="640", backgroundColor="#000000")]
 	[Frame(factoryClass="Preloader")]
@@ -17,8 +22,7 @@ package
 	{
 		public function OneHP()
         {
-            // TODO: add menu state, and set first state to it
-            super(240, 320, PlayState, 2);
+            super(240, 320, MenuState, 2);
 
             forceDebugger = true;
             FlxG.mouse.show();
@@ -30,8 +34,9 @@ package
         private function createLevelList():void
         {
             SeanG.levels.push(Level_Level_1);
-            SeanG.levels.push(Level_Level_1);
-            SeanG.levels.push(Level_Level_1);
+            SeanG.levels.push(Level_Level_2);
+            SeanG.levels.push(Level_Level_3);
+            SeanG.levels.push(Level_Level_4);
         }
 	}
 }

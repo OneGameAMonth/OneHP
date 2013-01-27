@@ -54,7 +54,7 @@ package game.states
             FlxG.camera.follow(_player,FlxCamera.STYLE_PLATFORMER);
 
             // create major objects
-            _player = new Player(32, 180);
+            _player = new Player(120, 300);
             SeanG.player = _player;
 
             _boss = new Boss(0, 36);
@@ -141,7 +141,7 @@ package game.states
             if (_timeCounter < 0)
             {
                 _timeCounter = 0;
-                // TODO: player lose
+                restartLevel();
             }
 
             // update time counter text
@@ -194,13 +194,13 @@ package game.states
             }
             else if (msg.name == "NextLevel")
             {
-                FlxG.fade(0xffd8eba2, 2.4, loadNextLevel);
+                FlxG.fade(0xffd8eba2, 1.6, loadNextLevel);
                 // [Debug]
                 FlxG.log("NextLevel");
             }
             else if (msg.name == "RestartLevel")
             {
-                FlxG.fade(0xffd8eba2, 2.4, restartLevel);
+                FlxG.fade(0xffd8eba2, 1.6, restartLevel);
                 //[ [Debug]
                 FlxG.log("RestartLevel");
             }
@@ -236,6 +236,8 @@ package game.states
             SeanG.levelIndex += 1;
             if (SeanG.levelIndex < SeanG.levels.length)
                 FlxG.switchState(new PlayState());
+            else
+                FlxG.switchState(new MenuState());
         }
 
         private function restartLevel():void
