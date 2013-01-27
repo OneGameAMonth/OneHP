@@ -21,6 +21,8 @@ package game
         public static var Img_BossMantis:Class;
         [Embed(source="../../assets/gibs.png")]
         public static var Img_BossGibs:Class;
+        [Embed(source="../../assets/Explosion.mp3")]
+        public static var Snd_Explosion:Class;
 
         // Platform assets
         [Embed(source="../../assets/Platform.png")]
@@ -33,6 +35,9 @@ package game
         // HUD assets
         [Embed(source="../../assets/Panel.png")]
         public static var Img_Panel:Class;
+
+        [Embed(source="../../assets/Jake_Allison_-_Jungle_Gymnast_tozo_Remix.mp3")]
+        public static var Snd_BgMusic:Class;
 
         public function Assets() {}
     }

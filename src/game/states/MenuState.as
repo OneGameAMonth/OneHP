@@ -5,21 +5,25 @@ package game.states
     import org.flixel.FlxText;
 
     import game.SeanG;
+    import game.Assets;
 
     public class MenuState extends FlxState
 	{
 		override public function create():void
 		{
 			var t:FlxText;
-			t = new FlxText(0, FlxG.height/2-10, FlxG.width, "OneHP");
-			t.size = 16;
+			t = new FlxText(0, FlxG.height/2-36, FlxG.width, "One HP");
+			t.size = 21;
 			t.alignment = "center";
 			add(t);
-			t = new FlxText(FlxG.width/2-50, FlxG.height-20, 100, "Enter to play");
+			t = new FlxText(FlxG.width/2-50, FlxG.height-120, 100, "Press Enter");
 			t.alignment = "center";
 			add(t);
-			
-			FlxG.mouse.show();
+
+            t = new FlxText(FlxG.width/2, FlxG.height - 96, 100, "Music by Jake Allison");
+            t.alignment = "center";
+            t.color = 0xff335599;
+            add(t);
 		}
 
 		override public function update():void
@@ -28,8 +32,7 @@ package game.states
 
 			if(FlxG.keys.justPressed("ENTER"))
 			{
-                SeanG.levelIndex = 0;
-				FlxG.switchState(new PlayState());
+				FlxG.switchState(new TutState());
 			}
 		}
 	}

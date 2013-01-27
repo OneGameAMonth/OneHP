@@ -2,8 +2,6 @@ package
 {
     import flash.ui.Mouse;
 
-    import game.states.MenuState;
-
     import org.flixel.FlxG;
     import org.flixel.FlxGame;
 
@@ -25,9 +23,8 @@ package
             super(240, 320, MenuState, 2);
 
             forceDebugger = true;
-            FlxG.mouse.show();
-            Mouse.show();
 
+            Mouse.show();
             createLevelList();
 		}
 

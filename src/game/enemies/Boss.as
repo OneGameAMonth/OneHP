@@ -68,6 +68,7 @@ package game.enemies
                 SeanG.bossExplosionGibs.start(true, 3, 0, 64);
             }
             SeanG.switchboard.sendMessage("BossKilled", FlxG.state as IMessageListener, this);
+            FlxG.play(Assets.Snd_Explosion);
         }
 
         public function handleMessage(msg:Message):void
