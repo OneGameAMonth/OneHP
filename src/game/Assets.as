@@ -9,6 +9,8 @@ package game
         // Hero assets
         [Embed(source="../../assets/Player.png")]
         public static var Img_Hero:Class;
+        [Embed(source="../../assets/shoot.mp3")]
+        public static var Snd_Shoot:Class;
 
         // Hero bullet
         [Embed(source="../../assets/Bullet.png")]
@@ -17,6 +19,8 @@ package game
         // Boss assets
         [Embed(source="../../assets/BossMantis.png")]
         public static var Img_BossMantis:Class;
+        [Embed(source="../../assets/gibs.png")]
+        public static var Img_BossGibs:Class;
 
         // Platform assets
         [Embed(source="../../assets/Platform.png")]

@@ -41,6 +41,13 @@ package game.doodads
             play(type);
         }
 
+        override public function update():void
+        {
+            super.update();
+            if (!onScreen())
+                kill();
+        }
+
         public function touchedBy(obj:FlxBasic):void
         {
             FlxG.log("touched by" + obj.toString());

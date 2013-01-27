@@ -4,6 +4,8 @@
  */
 package game.enemies
 {
+    import org.flixel.FlxEmitter;
+    import org.flixel.FlxG;
     import org.flixel.FlxSprite;
 
     import pixelsean.behavior.BehaviorManager;
@@ -15,6 +17,7 @@ package game.enemies
 
     import game.Assets;
     import game.ai.BossIdle;
+    import game.SeanG;
 
     public class Boss extends FlxSprite implements IBehaviorManagerHost, IStateMachineHost, IMessageListener
     {
@@ -54,6 +57,17 @@ package game.enemies
 
             // [System] Behavior System
             _behaviorManager.update();
+        }
+
+        override public function kill():void
+        {
+            super.kill();
+            if (SeanG.bossExplosionGibs != null)
+            {
+                SeanG.bossExplosionGibs.at(this);
+                SeanG.bossExplosionGibs.start(true, 3, 0, 64);
+            }
+            SeanG.switchboard.sendMessage("BossKilled", FlxG.state as IMessageListener, this);
         }
 
         public function handleMessage(msg:Message):void

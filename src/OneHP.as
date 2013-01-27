@@ -3,13 +3,17 @@ package
 
     import flash.ui.Mouse;
 
+    import game.SeanG;
+
     import game.states.MenuState;
     import game.states.PlayState;
 
     import org.flixel.FlxG;
     import org.flixel.FlxGame;
 
-	[SWF(width="480", height="640", backgroundColor="#000000")]
+    import pixelsean.message.Switchboard;
+
+    [SWF(width="480", height="640", backgroundColor="#000000")]
 	[Frame(factoryClass="Preloader")]
 
 	public class OneHP extends FlxGame

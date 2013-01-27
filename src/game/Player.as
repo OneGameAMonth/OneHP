@@ -15,7 +15,7 @@ package game
     public class Player extends FlxSprite implements IMessageListener
     {
         // [Behavior] controllable var
-        protected var _controllable:Boolean;
+        public var controllable:Boolean = true;
         
         // [Behavior] walk var
         private var _isWalking:Boolean;         // walkning or not
@@ -51,9 +51,6 @@ package game
             // [Physics] graviy
             _gravity = 420;                 // config
             acceleration.y = _gravity;
-            
-            // [Behavior] controllable init
-            _controllable = true;           // config
             
             // [Behavior] health
             health = 1;                     // config
@@ -91,7 +88,7 @@ package game
             getMidpoint(_point);
 
             // [Behavior] walk update
-            if (_controllable)
+            if (controllable)
             {
                 if (FlxG.keys.LEFT && !FlxG.keys.RIGHT)
                 {
@@ -125,7 +122,7 @@ package game
                 _jumpingUp = false;
                 _fallingDown = true;
             }
-            if (_controllable)          // jump action
+            if (controllable)          // jump action
             {
                 if (FlxG.keys.justPressed("X"))
                 {
@@ -179,10 +176,10 @@ package game
             if (FlxG.keys.justPressed("C"))
             {
                 Bullet.shoot(_point, _aim);
+                FlxG.play(Assets.Snd_Shoot);
 			}
             
             // [Event] handle collision
-            // TODO: make collision handle a callback behavior
             if (isTouching(FLOOR))
             {
                 _isJumping = false;
@@ -204,6 +201,10 @@ package game
         
         public function handleMessage(Msg:Message):void
         {
+            if (Msg.name == "hurt")
+            {
+                SeanG.switchboard.sendMessage("PlayerKilled", FlxG.state as IMessageListener);
+            }
         }
         
         public function walk(walkDir:uint):void

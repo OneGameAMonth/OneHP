@@ -2,12 +2,14 @@ package game
 {
     import flash.display.Sprite;
 
-    import game.enemies.Boss;
-
+    import org.flixel.FlxEmitter;
     import org.flixel.FlxGroup;
     import org.flixel.FlxPoint;
+    import org.flixel.plugin.photonstorm.FX.BlurFX;
 
     import pixelsean.message.Switchboard;
+
+    import game.enemies.Boss;
 
     /**
      * global registry class
@@ -22,12 +24,14 @@ package game
         public static var playerMidPoint:FlxPoint;
         public static var boss:Boss;
         public static var bossMidPoint:FlxPoint;
+        public static var blur:BlurFX;
 
         // major groups
         public static var bullets:FlxGroup;
         public static var blocks:FlxGroup;
         public static var platforms:FlxGroup;
         public static var enemies:FlxGroup;
+        public static var bossExplosionGibs:FlxEmitter;
 
         // [Debugger]
         public static var theTopGameSprite:Sprite;

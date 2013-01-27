@@ -14,14 +14,12 @@ package game.damagers
 		public function Bullet()
 		{
 			super();
-            loadGraphic(Assets.Img_Bullet, true);
-			width = 3;
-            height = 3;
-			offset.x = 0;
-            offset.y = 0;
+            loadGraphic(Assets.Img_Bullet, true, false, 6, 6);
+			width = 6;
+            height = 6;
 
             addAnimation("shoot", [0]);
-            addAnimation("poof", [1, 2, 3], 20, false);
+            addAnimation("poof", [1, 2], 20, false);
 
 			speed = 360;
 		}
@@ -57,6 +55,8 @@ package game.damagers
             solid = false;
 
             play("poof");
+
+            SeanG.blur.removeSprite(this);
 		}
 
         public static function shoot(location:FlxPoint, aim:uint):void
@@ -78,6 +78,7 @@ package game.damagers
             	default:
                 	break;
             }
+            SeanG.blur.addSprite(bullet);
 		}
 	}
 }
