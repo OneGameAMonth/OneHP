@@ -2,6 +2,8 @@ package game
 {
     import flash.display.Sprite;
 
+    import game.hud.Panel;
+
     import org.flixel.FlxEmitter;
     import org.flixel.FlxGroup;
     import org.flixel.FlxPoint;
@@ -25,6 +27,9 @@ package game
         public static var boss:Boss;
         public static var bossMidPoint:FlxPoint;
         public static var blur:BlurFX;
+        public static var panel:Panel;
+        public static var levels:Array = new Array;
+        public static var levelIndex:int = 0;
 
         // major groups
         public static var bullets:FlxGroup;
@@ -44,6 +49,18 @@ package game
         public static function erase():void
         {
             // clean temp attribute objects here
+            player = null;
+            playerMidPoint = null;
+            boss = null;
+            bossMidPoint = null;
+            blur = null;
+            panel = null;
+
+            bullets = null;
+            blocks = null;
+            platforms = null;
+            enemies = null;
+            bossExplosionGibs = null;
         }
     }
 }

@@ -8,7 +8,6 @@ package game.states
     import org.flixel.FlxState;
     import org.flixel.FlxText;
     import org.flixel.plugin.photonstorm.FX.BlurFX;
-    import org.flixel.plugin.photonstorm.FlxBar;
     import org.flixel.plugin.photonstorm.FlxSpecialFX;
 
     import pixelsean.message.IMessageListener;
@@ -18,8 +17,8 @@ package game.states
     import game.SeanG;
     import game.Assets;
     import game.doodads.Platform;
+    import game.hud.Panel;
     import game.enemies.Boss;
-    import game.levels.Level_Level_1;
 
     public class PlayState extends FlxState implements IMessageListener
 	{
@@ -35,9 +34,11 @@ package game.states
         private var _bossExplosionGibs:FlxEmitter;
         private var _blur:BlurFX;
         private var _blurSprite:FlxSprite;
+        private var _totalTime:Number;  // total time of current level
 
         private var _timeCounter:Number;
         private var _timeCounterText:FlxText;
+        private var _infoPanel:Panel;
 
 		override public function create():void
 		{
@@ -53,7 +54,7 @@ package game.states
             FlxG.camera.follow(_player,FlxCamera.STYLE_PLATFORMER);
 
             // create major objects
-            _player = new Player(32, 160);
+            _player = new Player(32, 180);
             SeanG.player = _player;
 
             _boss = new Boss(0, 36);
@@ -62,6 +63,7 @@ package game.states
 
             _timeCounterText = new FlxText(_boss.x + 16, _boss.y - 16, 64, "00.00");
             _timeCounterText.color = 0xffaabcde;
+            _infoPanel = new Panel();
 
             _bossExplosionGibs = new FlxEmitter();
             _bossExplosionGibs.setXSpeed(-120, 120);
@@ -95,7 +97,7 @@ package game.states
             SeanG.blur = _blur;
 
             // load map
-            var _map:Level_Level_1 = new Level_Level_1();
+            var _map:*= new SeanG.levels[SeanG.levelIndex];
             _platforms.add(_map.PlatformsGroup);
 
             // add objects to groups
@@ -103,6 +105,7 @@ package game.states
             _effects.add(_bossExplosionGibs);
             _effects.add(_blurSprite);
             _huds.add(_timeCounterText);
+            _huds.add(_infoPanel);
 
             // add groups by their draw order
             add(_blocks);
@@ -121,6 +124,7 @@ package game.states
             // other settings
             _blur.addSprite(_timeCounterText);
             _timeCounter = _map.time;
+            _totalTime = _map.time;
 		}
 
         override public function update():void
@@ -137,7 +141,7 @@ package game.states
             if (_timeCounter < 0)
             {
                 _timeCounter = 0;
-                // TODO: player failed
+                // TODO: player lose
             }
 
             // update time counter text
@@ -162,27 +166,41 @@ package game.states
             _bossExplosionGibs = null;
             _blur = null;
             _blurSprite = null;
+            _timeCounterText = null;
+            _infoPanel = null;
         }
 
         public function handleMessage(msg:Message):void
         {
-            if (msg.name == "BossKilled" || msg.name == "PlayerKilled")
+            if (msg.name == "PlayerKilled")
             {
-                // slow motion
-                FlxG.timeScale = 0.1;
-                SeanG.switchboard.sendMessage("RestoreTimeScale", this, this, 1.6);
-                FlxG.camera.shake(0.05, 0.1);
-                FlxG.camera.flash(0xffd8eba2, 0.12);
-
-                // disable player's control, remove time counter and popup score panel
-                SeanG.player.controllable = false;
-                _blur.removeSprite(_timeCounterText);
-                _timeCounterText.kill();
-                // TODO: popup score panel
+                // lose effect
+                winOrLoseEffect();
+                // lose info panel
+                _infoPanel.popup(-1);
+            }
+            else if (msg.name == "BossKilled")
+            {
+                // win effect
+                winOrLoseEffect();
+                // victory info panel
+                _infoPanel.popup(_timeCounter/_totalTime);
             }
             else if (msg.name == "RestoreTimeScale")
             {
                 FlxG.timeScale = 1;
+            }
+            else if (msg.name == "NextLevel")
+            {
+//                FlxG.fade(0xffd8eba2, 2.4, loadNextLevel);
+                // [Debug]
+                FlxG.log("NextLevel");
+            }
+            else if (msg.name == "RestartLevel")
+            {
+//                FlxG.fade(0xffd8eba2, 2.4, restartLevel);
+                //[ [Debug]
+                FlxG.log("RestartLevel");
             }
         }
 
@@ -195,6 +213,32 @@ package game.states
         private function touchPlatform(sprite1:FlxSprite, sprite2:FlxSprite):void
         {
             (sprite1 as Platform).touchedBy(sprite2);
+        }
+
+        private function winOrLoseEffect():void
+        {
+            // slow motion
+            FlxG.timeScale = 0.1;
+            SeanG.switchboard.sendMessage("RestoreTimeScale", this, this, 1.6);
+            FlxG.camera.shake(0.05, 0.1);
+            FlxG.camera.flash(0xffd8eba2, 0.12);
+
+            // disable player's control, remove time counter and popup score panel
+            SeanG.player.controllable = false;
+            _blur.removeSprite(_timeCounterText);
+            _timeCounterText.kill();
+        }
+
+        private function loadNextLevel():void
+        {
+            SeanG.levelIndex += 1;
+            if (SeanG.levelIndex < SeanG.levels.length)
+                FlxG.switchState(new PlayState());
+        }
+
+        private function restartLevel():void
+        {
+            FlxG.resetState();
         }
 	}
 }

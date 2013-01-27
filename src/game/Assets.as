@@ -30,6 +30,10 @@ package game
         [Embed(source="../../assets/ExplosionParticle.png")]
         public static var Img_ExplosionParticle:Class;
 
+        // HUD assets
+        [Embed(source="../../assets/Panel.png")]
+        public static var Img_Panel:Class;
+
         public function Assets() {}
     }
 }
