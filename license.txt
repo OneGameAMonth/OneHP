@@ -5,6 +5,7 @@ pixelpicosean@gmail.com
 http://picosean.iblogger.org/
 
 The source code is distributed under GNU GPL v2 license.
+Assets in assets foldier are distributed under CC-BY-NC license.
 
 Notes: 
 * "flixel" engine by Adam 'Atomic' Saltsman, see: http://flixel.org
