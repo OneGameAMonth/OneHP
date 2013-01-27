@@ -152,7 +152,7 @@ package game.states
 
         override public function destroy():void
         {
-            super.destroy();
+//            super.destroy();
 
             FlxSpecialFX.clear();
 
@@ -168,6 +168,8 @@ package game.states
             _blurSprite = null;
             _timeCounterText = null;
             _infoPanel = null;
+
+            SeanG.erase();
         }
 
         public function handleMessage(msg:Message):void
@@ -192,13 +194,13 @@ package game.states
             }
             else if (msg.name == "NextLevel")
             {
-//                FlxG.fade(0xffd8eba2, 2.4, loadNextLevel);
+                FlxG.fade(0xffd8eba2, 2.4, loadNextLevel);
                 // [Debug]
                 FlxG.log("NextLevel");
             }
             else if (msg.name == "RestartLevel")
             {
-//                FlxG.fade(0xffd8eba2, 2.4, restartLevel);
+                FlxG.fade(0xffd8eba2, 2.4, restartLevel);
                 //[ [Debug]
                 FlxG.log("RestartLevel");
             }
