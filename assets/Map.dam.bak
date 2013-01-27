@@ -18,7 +18,7 @@
   <layers>
     <group name="Level_1" id="0" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
-        <type typeof="Float" name="time" value="30.000000" hidden="false"/>
+        <type typeof="Float" name="time" value="30" hidden="false"/>
       </properties>
       <spritelayer name="Platforms" id="0" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="6DB144DD-744A-2752-0E2F-AA5FCFE66FE3" x="64" y="224" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
@@ -90,9 +90,9 @@
     </group>
     <group name="Level_2" id="2" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
-        <type typeof="Float" name="time" value="25.000000" hidden="false"/>
+        <type typeof="Float" name="time" value="25" hidden="false"/>
       </properties>
-      <spritelayer name="Platforms" id="3" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+      <spritelayer name="Platforms" id="2" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="EF8B90E2-BA1F-D297-B627-5297700D9824" x="80" y="208" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
@@ -117,7 +117,7 @@
           <properties/>
         </sprite>
       </spritelayer>
-      <maplayer name="blocks" id="4" xScroll="1" yScroll="1" x="0" y="0" width="30" height="40" tileset="Tileset.png" tileWidth="8" tileHeight="8" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="8" tileSpacingY="8" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+      <maplayer name="blocks" id="3" xScroll="1" yScroll="1" x="0" y="0" width="30" height="40" tileset="Tileset.png" tileWidth="8" tileHeight="8" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="8" tileSpacingY="8" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>1,2,6,7,8,9,35,1,2,35,0,0,0,0,0,0,21,16,17,17,19,2,21,0,1,2,6,7,8,9</row>
         <row>11,12,16,17,17,19,0,11,12,0,0,0,0,0,0,0,0,16,17,17,19,12,0,0,11,12,16,17,17,19</row>
         <row>13,35,26,27,28,29,0,0,35,0,0,0,0,0,0,0,0,26,27,28,29,0,0,0,0,0,26,27,28,29</row>
@@ -162,9 +162,9 @@
     </group>
     <group name="Level_3" id="5" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
-        <type typeof="Float" name="time" value="25.000000" hidden="false"/>
+        <type typeof="Float" name="time" value="25" hidden="false"/>
       </properties>
-      <spritelayer name="Platforms" id="6" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+      <spritelayer name="Platforms" id="4" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="7430A5A2-2D79-0B15-DBE9-3AA0F05A7E19" x="80" y="176" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
@@ -204,6 +204,78 @@
           <properties/>
         </sprite>
         <sprite guid="067AA98C-6280-62D0-25DC-BF9708F49629" x="128" y="144" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+          <properties/>
+        </sprite>
+      </spritelayer>
+      <maplayer name="blocks" id="5" xScroll="1" yScroll="1" x="0" y="0" width="30" height="40" tileset="Tileset.png" tileWidth="8" tileHeight="8" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="8" tileSpacingY="8" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+        <row>1,2,6,7,8,9,35,1,2,35,0,0,0,0,0,0,21,16,17,17,19,2,21,0,1,2,6,7,8,9</row>
+        <row>11,12,16,17,17,19,0,11,12,0,0,0,0,0,0,0,0,16,17,17,19,12,0,0,11,12,16,17,17,19</row>
+        <row>13,35,26,27,28,29,0,0,35,0,0,0,0,0,0,0,0,26,27,28,29,0,0,0,0,0,26,27,28,29</row>
+        <row>13,21,36,37,38,39,0,0,0,0,0,0,0,0,0,0,0,36,37,38,39,0,0,0,0,0,36,37,38,39</row>
+        <row>13,6,7,8,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,15</row>
+        <row>13,16,17,17,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,12,15</row>
+        <row>13,26,27,28,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,15</row>
+        <row>13,36,37,38,39,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,6,7,8,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,16,17,17,19,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>13,26,27,28,29,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,15</row>
+        <row>13,36,37,38,39,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,11,12,15</row>
+        <row>23,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,25</row>
+      </maplayer>
+    </group>
+    <group name="Level_4" id="8" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
+      <properties>
+        <type typeof="Float" name="time" value="20" hidden="false"/>
+      </properties>
+      <spritelayer name="Platforms" id="6" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+        <sprite guid="4657D0E2-51D4-99F9-218A-012228FF7FD4" x="96" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+          <properties>
+            <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
+          </properties>
+        </sprite>
+        <sprite guid="3C0F97F5-1CA1-993F-B63D-02E00C6A756F" x="96" y="176" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+          <properties>
+            <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
+          </properties>
+        </sprite>
+        <sprite guid="33657A75-A69C-A534-86D4-21CE6D8F3FA0" x="144" y="144" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+          <properties>
+            <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
+          </properties>
+        </sprite>
+        <sprite guid="E82EF65D-6D32-0411-1888-91A3D64C16F8" x="48" y="208" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+          <properties>
+            <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
+          </properties>
+        </sprite>
+        <sprite guid="ECE7B58F-5EB8-45F2-D304-DDC780060027" x="144" y="272" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties/>
         </sprite>
       </spritelayer>
@@ -250,105 +322,36 @@
         <row>23,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,25</row>
       </maplayer>
     </group>
-    <group name="Level_4" id="8" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
-      <properties>
-        <type typeof="Float" name="time" value="20.000000" hidden="false"/>
-      </properties>
-      <spritelayer name="Platforms" id="9" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
-        <sprite guid="4657D0E2-51D4-99F9-218A-012228FF7FD4" x="96" y="240" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
-          <properties>
-            <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
-          </properties>
-        </sprite>
-        <sprite guid="3C0F97F5-1CA1-993F-B63D-02E00C6A756F" x="96" y="176" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
-          <properties>
-            <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
-          </properties>
-        </sprite>
-        <sprite guid="33657A75-A69C-A534-86D4-21CE6D8F3FA0" x="144" y="144" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
-          <properties>
-            <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
-          </properties>
-        </sprite>
-        <sprite guid="E82EF65D-6D32-0411-1888-91A3D64C16F8" x="48" y="208" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
-          <properties>
-            <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
-          </properties>
-        </sprite>
-        <sprite guid="ECE7B58F-5EB8-45F2-D304-DDC780060027" x="144" y="272" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
-          <properties/>
-        </sprite>
-      </spritelayer>
-      <maplayer name="blocks" id="10" xScroll="1" yScroll="1" x="0" y="0" width="30" height="40" tileset="Tileset.png" tileWidth="8" tileHeight="8" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="8" tileSpacingY="8" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
-        <row>1,2,6,7,8,9,35,1,2,35,0,0,0,0,0,0,21,16,17,17,19,2,21,0,1,2,6,7,8,9</row>
-        <row>11,12,16,17,17,19,0,11,12,0,0,0,0,0,0,0,0,16,17,17,19,12,0,0,11,12,16,17,17,19</row>
-        <row>13,35,26,27,28,29,0,0,35,0,0,0,0,0,0,0,0,26,27,28,29,0,0,0,0,0,26,27,28,29</row>
-        <row>13,21,36,37,38,39,0,0,0,0,0,0,0,0,0,0,0,36,37,38,39,0,0,0,0,0,36,37,38,39</row>
-        <row>13,6,7,8,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,15</row>
-        <row>13,16,17,17,19,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,11,12,15</row>
-        <row>13,26,27,28,29,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,15</row>
-        <row>13,36,37,38,39,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,6,7,8,9,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,16,17,17,19,35,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,26,27,28,29,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,2,15</row>
-        <row>13,36,37,38,39,11,12,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,21,11,12,15</row>
-        <row>23,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,25</row>
-      </maplayer>
-    </group>
     <group name="Level_5" id="11" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
-        <type typeof="Float" name="time" value="25.000000" hidden="false"/>
+        <type typeof="Float" name="time" value="25" hidden="false"/>
       </properties>
-      <spritelayer name="Platforms" id="12" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+      <spritelayer name="Platforms" id="8" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="6BDE6B90-C542-C361-A103-D7A64A1BC154" x="208" y="256" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
           </properties>
         </sprite>
-        <sprite guid="31B899D4-DFEA-828C-D50D-717EBC23C41C" x="208" y="160" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+        <sprite guid="31B899D4-DFEA-828C-D50D-717EBC23C41C" x="208" y="181" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
           </properties>
         </sprite>
-        <sprite guid="3382D60B-3DED-DDC2-2BE7-2BB93438D8A0" x="208" y="112" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+        <sprite guid="3382D60B-3DED-DDC2-2BE7-2BB93438D8A0" x="208" y="141" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
           </properties>
         </sprite>
-        <sprite guid="9150898F-3CB5-A042-D381-818AFE7CD034" x="208" y="208" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+        <sprite guid="9150898F-3CB5-A042-D381-818AFE7CD034" x="208" y="221" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
           </properties>
+        </sprite>
+        <sprite guid="BFDF40E7-DA6E-AED5-73A8-6BFD284DC584" x="208" y="104" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
+          <properties/>
         </sprite>
       </spritelayer>
-      <maplayer name="blocks" id="13" xScroll="1" yScroll="1" x="0" y="0" width="30" height="40" tileset="Tileset.png" tileWidth="8" tileHeight="8" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="8" tileSpacingY="8" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+      <maplayer name="blocks" id="9" xScroll="1" yScroll="1" x="0" y="0" width="30" height="40" tileset="Tileset.png" tileWidth="8" tileHeight="8" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="8" tileSpacingY="8" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>1,2,6,7,8,9,35,1,2,35,0,0,0,0,0,0,21,16,17,17,19,2,21,0,1,2,6,7,8,9</row>
         <row>11,12,16,17,17,19,0,11,12,0,0,0,0,0,0,0,0,16,17,17,19,12,0,0,11,12,16,17,17,19</row>
         <row>13,35,26,27,28,29,0,0,35,0,0,0,0,0,0,0,0,26,27,28,29,0,0,0,0,0,26,27,28,29</row>
@@ -391,11 +394,11 @@
         <row>23,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,25</row>
       </maplayer>
     </group>
-    <group name="Level_6" id="14" xScroll="1" yScroll="1" visible="true" open="true" locked="false" exports="true">
+    <group name="Level_6" id="14" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
       <properties>
-        <type typeof="Float" name="time" value="25.000000" hidden="false"/>
+        <type typeof="Float" name="time" value="25" hidden="false"/>
       </properties>
-      <spritelayer name="Platforms" id="15" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false" selected="true">
+      <spritelayer name="Platforms" id="10" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="087A80BE-C8ED-2637-121D-38BDDC7E1A05" x="64" y="224" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
@@ -487,7 +490,7 @@
           </properties>
         </sprite>
       </spritelayer>
-      <maplayer name="blocks" id="16" xScroll="1" yScroll="1" x="0" y="0" width="30" height="40" tileset="Tileset.png" tileWidth="8" tileHeight="8" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="8" tileSpacingY="8" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+      <maplayer name="blocks" id="11" xScroll="1" yScroll="1" x="0" y="0" width="30" height="40" tileset="Tileset.png" tileWidth="8" tileHeight="8" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="8" tileSpacingY="8" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>1,2,6,7,8,9,35,1,2,35,0,0,0,0,0,0,21,16,17,17,19,2,21,0,1,2,6,7,8,9</row>
         <row>11,12,16,17,17,19,0,11,12,0,0,0,0,0,0,0,0,16,17,17,19,12,0,0,11,12,16,17,17,19</row>
         <row>13,35,26,27,28,29,0,0,35,0,0,0,0,0,0,0,0,26,27,28,29,0,0,0,0,0,26,27,28,29</row>
@@ -530,11 +533,11 @@
         <row>23,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,24,25</row>
       </maplayer>
     </group>
-    <group name="Level_7" id="17" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true">
+    <group name="Level_7" id="17" xScroll="1" yScroll="1" visible="false" open="true" locked="false" exports="true" selected="true">
       <properties>
-        <type typeof="Float" name="time" value="30.000000" hidden="false"/>
+        <type typeof="Float" name="time" value="30" hidden="false"/>
       </properties>
-      <spritelayer name="Platforms" id="18" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
+      <spritelayer name="Platforms" id="12" xScroll="1" yScroll="1" visible="true" locked="false" exports="true" aligned="false" sort="false">
         <sprite guid="76D23A08-16DA-AD9B-8229-47D1456F34E0" x="96" y="256" Z="0" angle="0" scaleX="1" scaleY="1" flipped="false" idx="1" frame="0">
           <properties>
             <dataOverride name="type" typeof="String" value="one-off" idx="0"/>
@@ -604,7 +607,7 @@
           </properties>
         </sprite>
       </spritelayer>
-      <maplayer name="blocks" id="19" xScroll="1" yScroll="1" x="0" y="0" width="30" height="40" tileset="Tileset.png" tileWidth="8" tileHeight="8" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="8" tileSpacingY="8" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
+      <maplayer name="blocks" id="13" xScroll="1" yScroll="1" x="0" y="0" width="30" height="40" tileset="Tileset.png" tileWidth="8" tileHeight="8" visible="true" hasHits="false" drawIdx="1" collideIdx="1" eraseIdx="0" locked="false" exports="true" tileSpacingX="8" tileSpacingY="8" xStagger="0" tileOffsetX="0" tileOffsetY="0" isMaster="false" mapType="2d" hasHeight="false" repeatX="false" repeatY="false">
         <row>1,2,6,7,8,9,35,1,2,35,0,0,0,0,0,0,21,16,17,17,19,2,21,0,1,2,6,7,8,9</row>
         <row>11,12,16,17,17,19,0,11,12,0,0,0,0,0,0,0,0,16,17,17,19,12,0,0,11,12,16,17,17,19</row>
         <row>13,35,26,27,28,29,0,0,35,0,0,0,0,0,0,0,0,26,27,28,29,0,0,0,0,0,26,27,28,29</row>

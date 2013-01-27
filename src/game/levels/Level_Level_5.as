@@ -19,7 +19,7 @@ import game.doodads.Platform;
 		public var PlatformsGroup:FlxGroup = new FlxGroup;
 
 		//Properties
-		public var time:Number = 25.000000;
+		public var time:Number = 25;
 
 
 		public function Level_Level_5(addToStage:Boolean = true, onAddCallback:Function = null, parentObject:Object = null)
@@ -59,10 +59,13 @@ import game.doodads.Platform;
 
 		public function addSpritesForLayerPlatforms(onAddCallback:Function = null):void
 		{
-			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 256.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
-			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 160.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
-			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 112.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
-			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 208.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
+			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 257.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
+			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 196.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
+			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 167.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
+			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 224.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
+			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 140.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"
+			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 114.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"
+			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 92.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"
 		}
 
 		public function generateObjectLinks(onAddCallback:Function = null):void

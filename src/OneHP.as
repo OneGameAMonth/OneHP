@@ -12,6 +12,9 @@ package
     import game.levels.Level_Level_2;
     import game.levels.Level_Level_3;
     import game.levels.Level_Level_4;
+    import game.levels.Level_Level_5;
+    import game.levels.Level_Level_6;
+    import game.levels.Level_Level_7;
 
     [SWF(width="480", height="640", backgroundColor="#000000")]
 	[Frame(factoryClass="Preloader")]
@@ -34,6 +37,9 @@ package
             SeanG.levels.push(Level_Level_2);
             SeanG.levels.push(Level_Level_3);
             SeanG.levels.push(Level_Level_4);
+            SeanG.levels.push(Level_Level_5);
+            SeanG.levels.push(Level_Level_6);
+            SeanG.levels.push(Level_Level_7);
         }
 	}
 }
