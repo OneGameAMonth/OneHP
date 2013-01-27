@@ -156,5 +156,8 @@ import game.doodads.Platform;
 		private static var level_Level_2:Level_Level_2;
 		private static var level_Level_3:Level_Level_3;
 		private static var level_Level_4:Level_Level_4;
+		private static var level_Level_5:Level_Level_5;
+		private static var level_Level_6:Level_Level_6;
+		private static var level_Level_7:Level_Level_7;
 	}
 }

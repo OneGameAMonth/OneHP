@@ -19,7 +19,7 @@ import game.doodads.Platform;
 		public var PlatformsGroup:FlxGroup = new FlxGroup;
 
 		//Properties
-		public var time:Number = 20.000000;
+		public var time:Number = 30.000000;
 
 
 		public function Level_Level_1(addToStage:Boolean = true, onAddCallback:Function = null, parentObject:Object = null)
