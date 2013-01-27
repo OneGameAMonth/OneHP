@@ -39,7 +39,7 @@
         <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
         <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
         <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
-        <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
+        <row>21,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
         <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
         <row>13,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
         <row>13,1,2,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,15</row>
@@ -226,7 +226,7 @@
     <SaveGuidesSeparately>false</SaveGuidesSeparately>
   </options>
   <exporter name="/Users/clover/Applications/LevelEditors/DAME.app/Contents/Resources/lua/Exporters/flixelSimple.lua" spritepos="Top Left" rotatedSpritePos="false" relativePaths="false" useProjectExporterOnly="false">
-    <setting name="ExportOnlyCSV">true</setting>
+    <setting name="ExportOnlyCSV">false</setting>
     <setting name="Imports"/>
     <setting name="TileMapClass">FlxTilemap</setting>
     <setting name="FlixelPackage">org.flixel</setting>
