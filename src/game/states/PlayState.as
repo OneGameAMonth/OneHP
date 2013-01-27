@@ -36,7 +36,8 @@ package game.states
         private var _blur:BlurFX;
         private var _blurSprite:FlxSprite;
 
-        private var _timeCounter:FlxText;
+        private var _timeCounter:Number;
+        private var _timeCounterText:FlxText;
 
 		override public function create():void
 		{
@@ -59,8 +60,8 @@ package game.states
             _boss.x = FlxG.width/2-_boss.width/2;
             SeanG.boss = _boss;
 
-            _timeCounter = new FlxText(_boss.x + 16, _boss.y - 16, 64, "00.00");
-            _timeCounter.color = 0xffaabcde;
+            _timeCounterText = new FlxText(_boss.x + 16, _boss.y - 16, 64, "00.00");
+            _timeCounterText.color = 0xffaabcde;
 
             _bossExplosionGibs = new FlxEmitter();
             _bossExplosionGibs.setXSpeed(-120, 120);
@@ -101,7 +102,7 @@ package game.states
             _blocks.add(_map.layerblocks);
             _effects.add(_bossExplosionGibs);
             _effects.add(_blurSprite);
-            _huds.add(_timeCounter);
+            _huds.add(_timeCounterText);
 
             // add groups by their draw order
             add(_blocks);
@@ -118,7 +119,8 @@ package game.states
             _hazards.add(_boss);
 
             // other settings
-            _blur.addSprite(_timeCounter);
+            _blur.addSprite(_timeCounterText);
+            _timeCounter = _map.time;
 		}
 
         override public function update():void
@@ -130,9 +132,18 @@ package game.states
             FlxG.collide(_platforms, _player, touchPlatform);
             FlxG.overlap(_objects, _hazards, overlapped);
 
-            // update time counter position
-            _timeCounter.x = _boss.x + 17;
-            _timeCounter.y = _boss.y - 12;
+            // update time counter
+            _timeCounter -= FlxG.elapsed;
+            if (_timeCounter < 0)
+            {
+                _timeCounter = 0;
+                // TODO: player failed
+            }
+
+            // update time counter text
+            _timeCounterText.text = _timeCounter.toFixed(2);
+            _timeCounterText.x = _boss.x + 17;
+            _timeCounterText.y = _boss.y - 12;
         }
 
         override public function destroy():void
@@ -165,8 +176,8 @@ package game.states
 
                 // disable player's control, remove time counter and popup score panel
                 SeanG.player.controllable = false;
-                _blur.removeSprite(_timeCounter);
-                _timeCounter.kill();
+                _blur.removeSprite(_timeCounterText);
+                _timeCounterText.kill();
                 // TODO: popup score panel
             }
             else if (msg.name == "RestoreTimeScale")

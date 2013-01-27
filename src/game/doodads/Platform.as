@@ -50,7 +50,6 @@ package game.doodads
 
         public function touchedBy(obj:FlxBasic):void
         {
-            FlxG.log("touched by" + obj.toString());
             // one-off platform will fall down if anyone touch it
             if (_type == 1)
             {
