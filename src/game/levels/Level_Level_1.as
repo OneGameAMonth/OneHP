@@ -58,11 +58,11 @@ import game.doodads.Platform;
 
 		public function addSpritesForLayerPlatforms(onAddCallback:Function = null):void
 		{
+			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 64.000, 224.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
 			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 160.000, 160.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
 			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 208.000, 128.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
 			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 112.000, 192.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
-			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 16.000, 256.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
-			addSpriteToLayer("normal", null, Platform, PlatformsGroup , 64.000, 224.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"
+			addSpriteToLayer("normal", null, Platform, PlatformsGroup , 16.000, 256.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"
 		}
 
 		public function generateObjectLinks(onAddCallback:Function = null):void

@@ -6,7 +6,9 @@ package game.states
     import org.flixel.FlxGroup;
     import org.flixel.FlxSprite;
     import org.flixel.FlxState;
+    import org.flixel.FlxText;
     import org.flixel.plugin.photonstorm.FX.BlurFX;
+    import org.flixel.plugin.photonstorm.FlxBar;
     import org.flixel.plugin.photonstorm.FlxSpecialFX;
 
     import pixelsean.message.IMessageListener;
@@ -25,6 +27,7 @@ package game.states
         private var _boss:Boss;
         private var _blocks:FlxGroup;
         private var _bullets:FlxGroup;
+        private var _huds:FlxGroup;
         private var _objects:FlxGroup;
         private var _hazards:FlxGroup;
         private var _platforms:FlxGroup;
@@ -32,6 +35,8 @@ package game.states
         private var _bossExplosionGibs:FlxEmitter;
         private var _blur:BlurFX;
         private var _blurSprite:FlxSprite;
+
+        private var _timeCounter:FlxText;
 
 		override public function create():void
 		{
@@ -45,7 +50,6 @@ package game.states
             FlxG.bgColor = 0xff282a2b;
             FlxG.camera.setBounds(0, 0, 240, 320, true);
             FlxG.camera.follow(_player,FlxCamera.STYLE_PLATFORMER);
-//            FlxG.worldBounds.make(0, 0, 240, 320);
 
             // create major objects
             _player = new Player(32, 160);
@@ -54,6 +58,9 @@ package game.states
             _boss = new Boss(0, 36);
             _boss.x = FlxG.width/2-_boss.width/2;
             SeanG.boss = _boss;
+
+            _timeCounter = new FlxText(_boss.x + 16, _boss.y - 16, 64, "00.00");
+            _timeCounter.color = 0xffaabcde;
 
             _bossExplosionGibs = new FlxEmitter();
             _bossExplosionGibs.setXSpeed(-120, 120);
@@ -70,6 +77,7 @@ package game.states
             _bullets = new FlxGroup();
             _blocks = new FlxGroup();
             _effects = new FlxGroup();
+            _huds = new FlxGroup();
 
             // meta groups for collision
             _objects = new FlxGroup();
@@ -93,6 +101,7 @@ package game.states
             _blocks.add(_map.layerblocks);
             _effects.add(_bossExplosionGibs);
             _effects.add(_blurSprite);
+            _huds.add(_timeCounter);
 
             // add groups by their draw order
             add(_blocks);
@@ -101,11 +110,15 @@ package game.states
             add(_platforms);
             add(_bullets);
             add(_effects);
+            add(_huds);
 
             // sort objects into helper groups
             _objects.add(_bullets);
             _objects.add(_player);
             _hazards.add(_boss);
+
+            // other settings
+            _blur.addSprite(_timeCounter);
 		}
 
         override public function update():void
@@ -116,6 +129,10 @@ package game.states
             FlxG.collide(_blocks, _objects);
             FlxG.collide(_platforms, _player, touchPlatform);
             FlxG.overlap(_objects, _hazards, overlapped);
+
+            // update time counter position
+            _timeCounter.x = _boss.x + 17;
+            _timeCounter.y = _boss.y - 12;
         }
 
         override public function destroy():void
@@ -146,8 +163,10 @@ package game.states
                 FlxG.camera.shake(0.05, 0.1);
                 FlxG.camera.flash(0xffd8eba2, 0.12);
 
-                // disable player's control and popup score panel
+                // disable player's control, remove time counter and popup score panel
                 SeanG.player.controllable = false;
+                _blur.removeSprite(_timeCounter);
+                _timeCounter.kill();
                 // TODO: popup score panel
             }
             else if (msg.name == "RestoreTimeScale")

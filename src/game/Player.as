@@ -173,7 +173,7 @@ package game
             }
             
             // [Behavior] shooting update
-            if (FlxG.keys.justPressed("C"))
+            if (controllable && FlxG.keys.justPressed("C"))
             {
                 Bullet.shoot(_point, _aim);
                 FlxG.play(Assets.Snd_Shoot);
