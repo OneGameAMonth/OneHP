@@ -7,13 +7,9 @@ Other features will be added later.
 It is built for #1GAM and #1GAMCRUNCH, and as my Jan's game. 
 Read more about [#1GAM](http://onegameamonth.com). 
 
-You can play it online here:  
-[OneHP](https://dl.dropbox.com/u/83837173/OneHP/OneHP.html).  
-And my home page:
-[PixelPiclSean](http://picosean.iblogger.org)
-
-
-*License: see [LICENSE](license.txt)*
+You can play it online here: [OneHP](https://dl.dropbox.com/u/83837173/OneHP/OneHP.html).  
+And my home page: [PixelPiclSean](http://picosean.iblogger.org)  
+License: see [LICENSE](license.txt)  
 
 **About dev log and other informations, see the wiki:**
 **[wiki](https://github.com/pixelpicosean/OneHP/wiki/Home)**
