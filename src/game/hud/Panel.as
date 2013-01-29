@@ -91,9 +91,9 @@ package game.hud
             // change panel info
             if (result > 0)
             {
-                if (result < superTime)
+                if (result > superTime)
                     _panel.play("Super");
-                else if (result < goodTime)
+                else if (result > goodTime)
                     _panel.play("Good");
                 else if (result > 0)
                     _panel.play("Normal");

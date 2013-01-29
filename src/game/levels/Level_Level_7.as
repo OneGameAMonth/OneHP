@@ -20,6 +20,7 @@ import game.doodads.Platform;
 
 		//Properties
 		public var time:Number = 30;
+		public var bg:String = "dark";
 
 
 		public function Level_Level_7(addToStage:Boolean = true, onAddCallback:Function = null, parentObject:Object = null)
@@ -67,8 +68,8 @@ import game.doodads.Platform;
 			addSpriteToLayer("normal", null, Platform, PlatformsGroup , 32.000, 96.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"
 			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 16.000, 128.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
 			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 16.000, 160.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
-			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 32.000, 192.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"
-			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 112.000, 288.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"
+			addSpriteToLayer("normal", null, Platform, PlatformsGroup , 32.000, 192.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"
+			addSpriteToLayer("normal", null, Platform, PlatformsGroup , 112.000, 288.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"
 			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 128.000, 256.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
 			addSpriteToLayer("one-off", null, Platform, PlatformsGroup , 144.000, 224.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"one-off" }, null ), onAddCallback );//"Platform"
 			addSpriteToLayer("normal", null, Platform, PlatformsGroup , 176.000, 192.000, 0.000, 1, 1, false, 1.000, 1.000, generateProperties( { name:"type", value:"normal" }, null ), onAddCallback );//"Platform"

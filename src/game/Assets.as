@@ -24,6 +24,12 @@ package game
         [Embed(source="../../assets/Explosion.mp3")]
         public static var Snd_Explosion:Class;
 
+        // RestartMan assets
+        [Embed(source="../../assets/RestartMan.png")]
+        public static var Img_RestartMan:Class;
+        [Embed(source="../../assets/RestartPop.png")]
+        public static var Img_RestartPop:Class;
+
         // Platform assets
         [Embed(source="../../assets/Platform.png")]
         public static var Img_Platform:Class;
@@ -41,6 +47,12 @@ package game
 
         [Embed(source="../../assets/Jake_Allison_-_Jungle_Gymnast_tozo_Remix.mp3")]
         public static var Snd_BgMusic:Class;
+
+        [Embed(source="../../assets/BlueCastle.png")]
+        public static var Img_BlueBG:Class;
+
+        [Embed(source="../../assets/DarkTowerBg.jpg")]
+        public static var Img_DarkBG:Class;
 
         public function Assets() {}
     }

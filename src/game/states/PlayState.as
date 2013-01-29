@@ -1,5 +1,7 @@
 package game.states
 {
+    import game.enemies.RestartMan;
+
     import org.flixel.FlxCamera;
     import org.flixel.FlxEmitter;
     import org.flixel.FlxG;
@@ -99,6 +101,10 @@ package game.states
             // load map
             var _map:*= new SeanG.levels[SeanG.levelIndex];
             _platforms.add(_map.PlatformsGroup);
+            var bg:FlxSprite = new FlxSprite(0, 0, _map.bg == "blue" ? Assets.Img_BlueBG : Assets.Img_DarkBG);
+            add(bg);
+            var restartMan:RestartMan = new RestartMan(180, 296);
+            add(restartMan);
 
             // add objects to groups
             _blocks.add(_map.layerblocks);
@@ -120,6 +126,7 @@ package game.states
             _objects.add(_bullets);
             _objects.add(_player);
             _hazards.add(_boss);
+            _hazards.add(restartMan);
 
             // other settings
             _blur.addSprite(_timeCounterText);
@@ -141,7 +148,7 @@ package game.states
             if (_timeCounter < 0)
             {
                 _timeCounter = 0;
-                restartLevel();
+                SeanG.switchboard.sendMessage("RestartLevel", this, this);
             }
 
             // update time counter text

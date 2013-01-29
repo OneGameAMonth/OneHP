@@ -20,6 +20,7 @@ import game.doodads.Platform;
 
 		//Properties
 		public var time:Number = 30;
+		public var bg:String = "blue";
 
 
 		public function Level_Level_1(addToStage:Boolean = true, onAddCallback:Function = null, parentObject:Object = null)
